@@ -11,11 +11,10 @@ double GetNumber(string text)
 }
 
 int number = Convert.ToInt32(GetNumber("Пятизначное число = "));
-int ClassOfNumber = 10000;
 
-// void Answer(int number, int ClassOfNumber)
+void Palindrome(int number, int ClassOfNumber)
 {
-    while (number < 100000 && ClassOfNumber >= 1)
+    while (number < (ClassOfNumber * 10) && ClassOfNumber >= 1)
     {
         int lastN = number % 10;
         int firstN = number / ClassOfNumber;
@@ -32,14 +31,11 @@ int ClassOfNumber = 10000;
     }
     if (ClassOfNumber == 0)
     {
-        Console.WriteLine("Число является палиндромом");
+        System.Console.WriteLine("Число является палиндромом");
     }
-    
 }
 
-
-
-// System.Console.WriteLine(Answer(number, ClassOfNumber));
-
+Palindrome(number, 10000);
+System.Console.WriteLine(Palindrome);
 
 
