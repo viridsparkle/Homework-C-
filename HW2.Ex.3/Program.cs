@@ -8,11 +8,18 @@ int day = 1;
 
 // bool a = (day == 6) | (day == 7);
 
-if ( (day == 6) | (day == 7) )
+if (day >= 1 && day <= 7)
 {
-    Console.WriteLine("Выходной день");
+    if ( (day == 6) | (day == 7) )
+    {
+        Console.WriteLine("Выходной день");
+    }
+    else
+    {
+        Console.WriteLine("Будний день");
+    }
 }
-else
-{
-    Console.WriteLine("Будний день");
-}
+ else
+    {
+        Console.WriteLine("Такого дня недели не существует");
+    }
