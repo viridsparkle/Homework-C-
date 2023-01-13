@@ -10,8 +10,6 @@ double GetNumber(string text)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int number = Convert.ToInt32(GetNumber("Пятизначное число = "));
-
 void Palindrome(int number, int ClassOfNumber)
 {
     while (number < (ClassOfNumber * 10) && ClassOfNumber >= 1)
@@ -35,7 +33,5 @@ void Palindrome(int number, int ClassOfNumber)
     }
 }
 
+int number = Convert.ToInt32(GetNumber("Пятизначное число = "));
 Palindrome(number, 10000);
-System.Console.WriteLine(Palindrome);
-
-
