@@ -41,7 +41,7 @@ void PrintArray(int[] col)
     int count = col.Length;
     for (int index = 0; index < count; index++)
     {
-        System.Console.Write(col[index]);
+        System.Console.Write($"{col[index]} ");
     }
 }
 
@@ -66,7 +66,7 @@ return sum;
 // 6. 10110100 >> 180
  string GoodPrint(int[] bin, int dec)
  {
-    return $"{String.Join(",", bin)} >> {dec}";
+    return $"{String.Join(", ", bin)} >> {dec}";
  }
 
 // Введение дополнительного массива для вывода красивого результата
