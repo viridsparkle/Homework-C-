@@ -54,8 +54,8 @@ string GoodPrint(int[] array, int[] newArray)
     return $"{String.Join(", ", array)} >> {String.Join(" ", newArray)}";
  }
 
-int N = GetNumberByUser("");
-int[] arr = CreateArray(N);
+int n = GetNumberByUser("");
+int[] arr = CreateArray(n);
 FillArray(arr);
 
 int[] newArr = Mult(arr);
