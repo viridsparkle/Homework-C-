@@ -9,21 +9,10 @@
 // (k1 - k2) * x = b2 - b1
 // x = (b2 - b1) / (k1 - k2)
 
-// int[] GetData(int size);
-// {
-//     System.Console.WriteLine("b1 = ");
-//     int b1 = Convert.ToInt32(Console.ReadLine());
-//     System.Console.WriteLine("k1 = ");
-//     int k1 = Convert.ToInt32(Console.ReadLine());
-//     System.Console.WriteLine("b2 = ");
-//     int b2 = Convert.ToInt32(Console.ReadLine());
-//     System.Console.WriteLine("k2 = ");
-//     int k2 = Convert.ToInt32(Console.ReadLine());
-//     return new int[size] {b1, k1, b2, k2};
-// }
-
-// int[] data = GetData();
-
+// 1. Создание массива
+// 2. Заполнение массива (ввод данных с консоли)
+// 3. Метод получения координат точки пересечения прямых
+// 4. Распечатать результат
 
 // 1. Создание массива
 double[] CreateArray(int size)
@@ -36,13 +25,10 @@ void GetArray(double[] numbers)
 {
     for (int i = 0; i < numbers.Length; i++)
     {
-        // if (i = 0) 
-        // {
-        //     System.Console.WriteLine($"b1 = ");
-        // }
-        // if (i = 1) System.Console.WriteLine("k1 = ");
-        // if (i = 2) System.Console.WriteLine("b2 = ");
-        // if (i = 3) System.Console.WriteLine("k2 = ");
+        if (i == 0) System.Console.WriteLine("b1 = ");
+        if (i == 1) System.Console.WriteLine("k1 = ");
+        if (i == 2) System.Console.WriteLine("b2 = ");
+        if (i == 3) System.Console.WriteLine("k2 = ");
         numbers[i] = Convert.ToDouble(Console.ReadLine());
     }
 }
@@ -59,9 +45,15 @@ void GetArray(double[] numbers)
     return (x, y);
 }
 
+// 4. Распечатать результат
+string GoodPrint(double x, double y)
+{
+    return $"Координаты точки пересечения двух прямых: ( {x}; {y} )";
+}
+
 double[] array = CreateArray(4);
 GetArray(array);
 
 (double x, double y) point = GetXY(array);
-System.Console.WriteLine($"({point.x}; {point.y})");
+System.Console.WriteLine(GoodPrint(point.x, point.y));
 
